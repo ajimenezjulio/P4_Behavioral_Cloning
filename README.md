@@ -2,8 +2,11 @@
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-
 In this project we aim to predict the steering angle a driver must perform based on images collected from the road using a deep neural network trained on Keras. Along with the simulator app we can simulate a self driving behavior of a car.
+
+<p align="center"> 
+<img src="https://github.com/ajimenezjulio/P4_Behavioral_Cloning/blob/master/Markdown_Images/project.gif">
+</p>
 
 The goals / steps of this project are the following:
 * Use the simulator to collect data of good driving behavior
@@ -72,9 +75,16 @@ Before feeding the network with an image, some steps need to be performed:
 
 The model used for this project is a modified version of the [Nvidia paper](https://arxiv.org/abs/1604.07316), it consists of 1 normalization, 3 convolutional and 3 fully connected layers in the following way.
 
-![CNN](https://github.com/ajimenezjulio/P4_Behavioral_Cloning/blob/master/Markdown_Images/behavioral_cloning.pdf)
+![CNN](https://github.com/ajimenezjulio/P4_Behavioral_Cloning/blob/master/Markdown_Images/behavioral_cloning.png)
+
+The parameters involved in this model are the following:
+|Parameters| Number|
+|:--------:|:-----:|
+|Trainable|384,167|
+|Non-trainable|2,450|
+|**Total**|**386,617**|
 
 
 ### 5. Results
 
-The model performs very well for the first track and fairly good for the second one, however there are multiple challenges involving landscape colors and sharp curves where the model can't react fast enough or accurate enough and the car will lose track of the road.
+The model performs very well at maximum speed (`30.19 mph`) for the first track and fairly good for the second one, however there are multiple challenges involving landscape colors and sharp curves where the model can't react fast or accurate enough and the car will lose track of the road.
